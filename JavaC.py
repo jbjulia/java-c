@@ -3,12 +3,12 @@
 
 import os
 import sys
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 
 
 class Ui_MainWindow(object):
-    
     # initialize variables
     fileCount = 0
 
@@ -17,9 +17,9 @@ class Ui_MainWindow(object):
         MainWindow.resize(401, 601)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName('centralwidget')
-        
+
         """ lblTitle """
-        
+
         self.lblTitle = QtWidgets.QLabel(self.centralwidget)
         self.lblTitle.setGeometry(QtCore.QRect(100, 30, 201, 41))
         font = QtGui.QFont()
@@ -29,9 +29,9 @@ class Ui_MainWindow(object):
         self.lblTitle.setFont(font)
         self.lblTitle.setAlignment(QtCore.Qt.AlignCenter)
         self.lblTitle.setObjectName('lblTitle')
-        
+
         """ lblDescription """
-        
+
         self.lblDescription = QtWidgets.QLabel(self.centralwidget)
         self.lblDescription.setGeometry(QtCore.QRect(100, 70, 201, 41))
         font = QtGui.QFont()
@@ -41,15 +41,15 @@ class Ui_MainWindow(object):
         self.lblDescription.setFont(font)
         self.lblDescription.setAlignment(QtCore.Qt.AlignCenter)
         self.lblDescription.setObjectName('lblDescription')
-        
+
         """ listWidget """
-        
+
         self.listWidget = QtWidgets.QListWidget(self.centralwidget)
         self.listWidget.setGeometry(QtCore.QRect(50, 220, 301, 192))
         self.listWidget.setObjectName('listWidget')
-        
+
         """ btnSelect """
-        
+
         self.btnSelect = QtWidgets.QPushButton(self.centralwidget)
         self.btnSelect.setGeometry(QtCore.QRect(130, 150, 141, 51))
         font = QtGui.QFont()
@@ -58,9 +58,9 @@ class Ui_MainWindow(object):
         self.btnSelect.setFont(font)
         self.btnSelect.setObjectName('btnSelect')
         self.btnSelect.clicked.connect(self.btnSelectFile_Click)
-        
+
         """ btnConvert """
-        
+
         self.btnConvert = QtWidgets.QPushButton(self.centralwidget)
         self.btnConvert.setGeometry(QtCore.QRect(210, 430, 141, 51))
         font = QtGui.QFont()
@@ -69,9 +69,9 @@ class Ui_MainWindow(object):
         self.btnConvert.setFont(font)
         self.btnConvert.setObjectName('btnConvert')
         self.btnConvert.clicked.connect(self.btnConvert_Click)
-        
+
         """ btnCancel """
-        
+
         self.btnCancel = QtWidgets.QPushButton(self.centralwidget)
         self.btnCancel.setGeometry(QtCore.QRect(50, 430, 141, 51))
         font = QtGui.QFont()
@@ -82,7 +82,7 @@ class Ui_MainWindow(object):
         self.btnCancel.clicked.connect(self.btnCancel_Click)
 
         """ lblProgress """
-        
+
         self.lblProgress = QtWidgets.QLabel(self.centralwidget)
         self.lblProgress.setGeometry(QtCore.QRect(50, 510, 301, 21))
         font = QtGui.QFont()
@@ -92,9 +92,9 @@ class Ui_MainWindow(object):
         self.lblProgress.setFont(font)
         self.lblProgress.setAlignment(QtCore.Qt.AlignCenter)
         self.lblProgress.setObjectName('lblProgress')
-    
+
         """ progressBar """
-        
+
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
         self.progressBar.setGeometry(QtCore.QRect(50, 540, 301, 31))
         font = QtGui.QFont()
@@ -103,7 +103,7 @@ class Ui_MainWindow(object):
         self.progressBar.setFont(font)
         self.progressBar.setProperty('value', 0)
         self.progressBar.setObjectName('progressBar')
-        
+
         MainWindow.setCentralWidget(self.centralwidget)
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -111,7 +111,7 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(self.btnCancel, self.btnConvert)
 
     """ retranslateUi """
-    
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate('MainWindow', 'java c - v2'))
@@ -123,7 +123,7 @@ class Ui_MainWindow(object):
         self.lblProgress.setText(_translate('MainWindow', ''))
 
     """ btnSelectFile_Click """
-    
+
     def btnSelectFile_Click(self):
         # self.lblProgress.setText('File selection in progress...')
         self.progressBar.setValue(0)
@@ -147,7 +147,7 @@ class Ui_MainWindow(object):
         return None
 
     """ btnConvert_Click """
-    
+
     def btnConvert_Click(self):
         progress = float(0)
 
@@ -170,14 +170,14 @@ class Ui_MainWindow(object):
             self.lblProgress.setText('Complete! ' + str(self.fileCount) + ' files converted.')
 
         print('Conversion complete.')
-        
+
         self.listWidget.clear()
         self.fileCount = 0
 
         return None
 
     """ btnCancel_Click """
-    
+
     def btnCancel_Click(self):
         self.listWidget.clear()
         sys.exit()
