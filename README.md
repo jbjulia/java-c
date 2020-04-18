@@ -1,7 +1,7 @@
 # JavaC
 _Automatic Java File Conversion_
 
-**Requirements:** _Python 3_  
+**Requirements:** _Python 3, javac_  
 **How to Run:** _python3 javac.py_  
   
   
