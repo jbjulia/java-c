@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+     <property name="geometry">
+         <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>501</width>
+             <height>601</height>
+         </rect>
+     </property>
+     <property name="windowTitle">
+         <string>Java C</string>
+     </property>
+     <property name="windowOpacity">
+         <double>0.950000000000000</double>
+     </property>
+     <property name="styleSheet">
+         <string notr="true">background-color: rgb(45, 52, 54);</string>
+     </property>
+     <widget class="QWidget" name="centralwidget">
+         <widget class="QLabel" name="lblTitle">
+             <property name="geometry">
+                 <rect>
+                     <x>0</x>
+                     <y>30</y>
+                     <width>501</width>
+                     <height>51</height>
+                 </rect>
+             </property>
+             <property name="font">
+                 <font>
+                     <family>Ubuntu</family>
+                     <pointsize>36</pointsize>
+                     <italic>false</italic>
+                 </font>
+             </property>
+             <property name="styleSheet">
+                 <string notr="true">color: rgb(0, 184, 148);</string>
+             </property>
+             <property name="text">
+                 <string>Java C</string>
+             </property>
+             <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+             </property>
+         </widget>
+   <widget class="QLabel" name="lblDescription">
+    <property name="geometry">
+        <rect>
+            <x>0</x>
+            <y>90</y>
+            <width>501</width>
+            <height>21</height>
+        </rect>
+    </property>
+       <property name="font">
+           <font>
+               <family>Ubuntu</family>
+               <pointsize>11</pointsize>
+               <italic>true</italic>
+           </font>
+       </property>
+       <property name="styleSheet">
+           <string notr="true">color: rgb(255, 234, 167);</string>
+       </property>
+       <property name="text">
+           <string>Automatic File Converter</string>
+       </property>
+       <property name="alignment">
+           <set>Qt::AlignCenter</set>
+       </property>
+   </widget>
+         <widget class="QPushButton" name="btnSelect">
+             <property name="geometry">
+                 <rect>
+                     <x>170</x>
+                     <y>150</y>
+                     <width>161</width>
+                     <height>51</height>
+                 </rect>
+             </property>
+             <property name="font">
+                 <font>
+                     <family>Ubuntu</family>
+                     <pointsize>14</pointsize>
+                     <italic>false</italic>
+                 </font>
+             </property>
+             <property name="styleSheet">
+                 <string notr="true">QPushButton{
+                     background: none;
+                     border: 1px solid;
+                     border-color: rgb(0, 184, 148);
+                     border-radius: 23px;
+                     color: rgb(85, 239, 196);
+                     }
+                     QPushButton:hover:!pressed{
+                     border-color: rgb(0, 184, 148);
+                     border: 1px solid;
+                     border-color: rgb(255, 234, 167);
+                     color: rgb(255, 234, 167);
+                     }
+                 </string>
+             </property>
+             <property name="text">
+                 <string>select a file [ + ]</string>
+             </property>
+         </widget>
+         <widget class="QListWidget" name="listWidget">
+             <property name="geometry">
+                 <rect>
+                     <x>50</x>
+                     <y>220</y>
+                     <width>401</width>
+                     <height>192</height>
+                 </rect>
+             </property>
+             <property name="font">
+                 <font>
+                     <pointsize>11</pointsize>
+                 </font>
+             </property>
+             <property name="styleSheet">
+                 <string notr="true">QListWidget{
+                     background: transparent;
+                     border: 1px solid;
+                     border-color: rgb(0, 184, 148);
+                     color: rgb(255, 234, 167);
+                     }
+                 </string>
+             </property>
+             <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+             </property>
+         </widget>
+         <widget class="QPushButton" name="btnCancel">
+             <property name="geometry">
+                 <rect>
+                     <x>80</x>
+                     <y>430</y>
+                     <width>161</width>
+                     <height>51</height>
+                 </rect>
+             </property>
+             <property name="font">
+                 <font>
+                     <family>Ubuntu</family>
+                     <pointsize>14</pointsize>
+                     <italic>false</italic>
+                 </font>
+             </property>
+             <property name="styleSheet">
+                 <string notr="true">QPushButton{
+                     background: none;
+                     border: 1px solid;
+                     border-color: rgb(0, 184, 148);
+                     border-radius: 23px;
+                     color: rgb(85, 239, 196);
+                     }
+                     QPushButton:hover:!pressed{
+                     border-color: rgb(0, 184, 148);
+                     border: 1px solid;
+                     border-color: rgb(255, 234, 167);
+                     color: rgb(255, 234, 167);
+                     }
+                 </string>
+             </property>
+             <property name="text">
+                 <string>cancel [ x ]</string>
+             </property>
+         </widget>
+         <widget class="QPushButton" name="btnConvert">
+             <property name="geometry">
+                 <rect>
+                     <x>260</x>
+                     <y>430</y>
+                     <width>161</width>
+                     <height>51</height>
+                 </rect>
+             </property>
+             <property name="font">
+                 <font>
+                     <family>Ubuntu</family>
+                     <pointsize>14</pointsize>
+                     <italic>false</italic>
+                 </font>
+             </property>
+             <property name="styleSheet">
+                 <string notr="true">QPushButton{
+                     background: none;
+                     border: 1px solid;
+                     border-color: rgb(0, 184, 148);
+                     border-radius: 23px;
+                     color: rgb(85, 239, 196);
+                     }
+                     QPushButton:hover:!pressed{
+                     border-color: rgb(0, 184, 148);
+                     border: 1px solid;
+                     border-color: rgb(255, 234, 167);
+                     color: rgb(255, 234, 167);
+                     }
+                 </string>
+             </property>
+             <property name="text">
+                 <string>convert [ ! ]</string>
+             </property>
+         </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+        <rect>
+            <x>50</x>
+            <y>530</y>
+            <width>401</width>
+            <height>41</height>
+        </rect>
+    </property>
+       <property name="font">
+           <font>
+               <family>Ubuntu</family>
+               <pointsize>11</pointsize>
+               <italic>false</italic>
+           </font>
+       </property>
+       <property name="styleSheet">
+           <string notr="true">QProgressBar {
+               background: transparent;
+               border: 1px solid;
+               border-color: rgb(0, 184, 148);
+               color: rgb(99, 110, 114);
+               text-align: center;
+               }
+               QProgressBar::chunk {
+               background: QLinearGradient( x1: 0, y1: 0, x2: 1, y2: 0,
+               stop: 0 #fab1a0,
+               stop: 0.65 #ffeaa7,
+               stop: 0.85 #55efc4,
+               stop: 1 #00b894
+               );
+               }
+           </string>
+       </property>
+       <property name="value">
+           <number>0</number>
+       </property>
+   </widget>
+   <widget class="QLabel" name="lblProgress">
+    <property name="geometry">
+        <rect>
+            <x>50</x>
+            <y>500</y>
+            <width>401</width>
+            <height>21</height>
+        </rect>
+    </property>
+       <property name="font">
+           <font>
+               <family>Ubuntu</family>
+               <pointsize>11</pointsize>
+               <italic>false</italic>
+           </font>
+       </property>
+       <property name="styleSheet">
+           <string notr="true">color: rgb(255, 234, 167);</string>
+       </property>
+       <property name="text">
+           <string/>
+       </property>
+       <property name="alignment">
+           <set>Qt::AlignCenter</set>
+       </property>
+   </widget>
+     </widget>
+     <widget class="QStatusBar" name="statusbar">
+         <property name="styleSheet">
+             <string notr="true">color: rgb(214, 48, 49);</string>
+         </property>
+     </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
