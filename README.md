@@ -1,8 +1,8 @@
 # JavaC
-Automatic Java File Conversion
+_Automatic Java File Conversion_
 
-Requirements: Python 3  
-How to Run: python3 javac.py  
+**Requirements:** _Python 3_  
+**How to Run:** _python3 javac.py_  
   
   
 JavaC is a small Python utility that allows you to select multiple Java  
