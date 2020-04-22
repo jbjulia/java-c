@@ -56,24 +56,25 @@ class MainWindow(QtWidgets.QMainWindow):
             for i in range(self.listWidget.count()):
                 command = "javac '" + str(self.listWidget.item(i).text()) + "'"
                 returned = subprocess.call(command, shell=True)
+                
+                while progress < 100:
+                    progress += 0.0001
+                    self.progressBar.setValue(progress)
+
+                self.lblProgress.setText(
+                    "Complete! "
+                    + str(self.file_count)
+                    + " file converted." if self.file_count == 1 else " files converted."
+                )
+
+                print("Conversion complete.")
+                
                 if returned != 0:
                     raise Exception
         except Exception as e:
             print("Error, cannot convert file(s).", str(e))
             self.lblProgress.setText("Error converting file(s). Please check your syntax.")
             return
-
-        while progress < 100:
-            progress += 0.0001
-            self.progressBar.setValue(progress)
-
-        self.lblProgress.setText(
-            "Complete! "
-            + str(self.file_count)
-            + " file converted." if self.file_count == 1 else " files converted."
-        )
-
-        print("Conversion complete.")
 
         self.listWidget.clear()
 
