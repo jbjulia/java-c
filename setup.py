@@ -7,7 +7,7 @@ with open("../requirements.txt") as requirements:
     install_requires = [line.strip() for line in requirements]
 
 setup(
-    name="PyKids",
+    name="JavaC",
     version="1.0.0",
     license="MIT",
     url="https://github.com/jbjulia/JavaC",

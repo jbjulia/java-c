@@ -1,7 +1,7 @@
 import subprocess
 import sys
 
-from PyQt5 import QtWidgets, uic
+from PyQt5 import QtWidgets, uic, QtGui
 from PyQt5.QtWidgets import QFileDialog
 
 from resources import constants as c
@@ -17,6 +17,15 @@ class MainWindow(QtWidgets.QMainWindow):
         self.btnSelect.clicked.connect(self.select_files)
         self.btnConvert.clicked.connect(self.convert_files)
         self.btnCancel.clicked.connect(self.quit_app)
+
+        self.setup_ui()
+
+    def setup_ui(self):
+        """
+        Setup UI, connect icons and get/display errors if they exist
+        :return:
+        """
+        self.setWindowIcon(QtGui.QIcon(c.LOGO))
 
         if c.ERRORS:
             self.lblProgress.setText(c.ERRORS)  # Display permission error if one exists

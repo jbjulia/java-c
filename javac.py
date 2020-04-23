@@ -1,5 +1,5 @@
 __author__ = "Joseph Braden Julian"
-__version__ = "1.0"
+__version__ = "1.0.0"
 
 """
 JavaC is an small application that allows the user to select

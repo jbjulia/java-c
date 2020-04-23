@@ -32,3 +32,4 @@ def check_permissions():
 
 PATH, ERRORS = check_permissions()
 JAVAC = "{}{}".format(PATH, "/ui/javac.ui")
+LOGO = "{}{}".format(PATH, "/images/convert.png")
