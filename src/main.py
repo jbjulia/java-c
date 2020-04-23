@@ -56,7 +56,7 @@ class MainWindow(QtWidgets.QMainWindow):
             for i in range(self.listWidget.count()):
                 command = "javac '" + str(self.listWidget.item(i).text()) + "'"
                 returned = subprocess.call(command, shell=True)
-                
+
                 while progress < 100:
                     progress += 0.0001
                     self.progressBar.setValue(progress)
@@ -68,7 +68,7 @@ class MainWindow(QtWidgets.QMainWindow):
                 )
 
                 print("Conversion complete.")
-                
+
                 if returned != 0:
                     raise Exception
         except Exception as e:

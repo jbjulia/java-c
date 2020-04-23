@@ -1,30 +1,28 @@
-import os
-import sys
-from pathlib import Path
+from setuptools import setup, find_packages
 
+with open("../README.md") as readme:
+    long_description = readme.read()
 
-def get_os():
-    """
-    Check operating system, return string (e.g. 'linux' or 'win32')
-    :return: sys.platform
-    """
-    return sys.platform
+with open("../requirements.txt") as requirements:
+    install_requires = [line.strip() for line in requirements]
 
-
-def check_permissions():
-    """
-    Check permissions of current directory and return path, error
-    :return: path, errors
-    """
-    path = Path(__file__).parent.absolute()
-    error = None
-
-    try:
-        os.access(path, os.R_OK)  # Check for read permissions
-        os.access(path, os.W_OK)  # Check for write permissions
-        os.access(path, os.X_OK)  # Check for execution permissions
-    except PermissionError as e:
-        error = e
-        print("Permission Error (", error, ") exists. Try root?")
-    finally:
-        return path, error if error else None  # Return directory path and error if one exists
+setup(
+    name="PyKids",
+    version="1.0.0",
+    license="MIT",
+    url="https://github.com/jbjulia/JavaC",
+    author="Joseph Julian",
+    author_email="joseph.b.julian@gmail.com",
+    description="A small Python utility that converts Java (.java) files into Java (.class) files. ",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    packages=find_packages(),
+    include_package_data=True,
+    python_requires=">=3.6",
+    install_requires=install_requires,
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Programming Language :: Python :: 3",
+    ]
+)
