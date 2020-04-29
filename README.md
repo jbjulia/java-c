@@ -14,7 +14,7 @@ $ pip install -r requirements.txt
 
 ## Usage
 
-```python
+```bash
 $ python3 javac.py
 ```
 
