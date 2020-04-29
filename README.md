@@ -1,20 +1,27 @@
 # JavaC
-_Automatic Java File Conversion_
 
-**Requirements:** _Python3, PyQt5, javac_  
-**How to Run:** _python3 javac.py_  
-  
-  
-JavaC is a small Python utility that allows you to select multiple Java (.java) files and convert them into Class  
-(.class) files.  
-  
+A small Python utility that converts Java (.java) files into Java (.class) files.
+
 ![Alt text](/resources/images/GUI.png)  
-  
-Selected files are added to a QListWidget, where they can then be converted to Class files in bulk.  
-  
-![Alt text](/resources/images/FileSelection.png)  
-  
-Once complete, successfully compiled Class files will appear in the same directory the Java files were selected from.  
-If errors occur, the conversion will halt and no files will be converted.  
-  
-![Alt text](/resources/images/FileConversion.png)
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install JavaC.
+
+```bash
+$ pip install -r requirements.txt
+```
+
+## Usage
+
+```python
+$ python3 javac.py
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
